@@ -10,9 +10,9 @@
 const int ledPin = 23;
 const int pinArray[7] = {32, 19, 21, 18, 25, 33, 22};
 const String topicArray[7] ={"Raum_Rechts", "Raum_Mitte", "Raum_Links", "Fenster_Rechts", "Fenster_Mitte", "Fenster_Links", "E_Ecke"};
-const IPAddress mqtt_server(00,00,00,00);
-#define mqttUser = "XXXXX"
-#define mqttPass = "XXXXX"
+const IPAddress mqtt_server(00, 00 , 00, 00;
+const String mqttUser = "XXXXX";
+const String mqttPass = "XXXXX";
 
 
 const int ArraySize = sizeof(pinArray)/sizeof(pinArray[0]);
@@ -20,7 +20,7 @@ bool status;
 
 //MQTT Setup
 WiFiClient espClient;
-PubSubClient mqtt(espClient);
+PubSubClient mqtt(espClient, mqttUser, mqttPass);
 
 // Setup LED
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(ArraySize, ledPin, NEO_GRB + NEO_KHZ800);
